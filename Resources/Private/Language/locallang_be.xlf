@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+	<file source-language="en"
+		  datatype="plaintext"
+		  original="EXT:ot_btcarousel/Resources/Private/Language/locallang_be.xlf"
+		  date="2021-02-21T16:30:40Z"
+		  product-name="ot_btcarousel">
+		<header/>
+		<body>
+			<trans-unit id="extension.title" resname="extension.title">
+				<source>BT5 Carousel</source>
+			</trans-unit>
+			<trans-unit id="extension.description" resname="extension.description">
+				<source>Content Element for standard Bootstrap 5 Carousels</source>
+			</trans-unit>
+			<trans-unit id="cropVariant.slider" resname="cropVariant.slider">
+				<source>Slider Desktop</source>
+			</trans-unit>
+			<trans-unit id="sys_file_reference.link.description" resname="sys_file_reference.link.description">
+				<source>The title of the link overwrites the button label set by default in the slider.</source>
+			</trans-unit>
+			<trans-unit id="flexform.interval.label" resname="flexform.interval.label">
+				<source>Interval</source>
+			</trans-unit>
+			<trans-unit id="flexform.fade.label" resname="flexform.fade.label">
+				<source>Crossfade</source>
+			</trans-unit>
+			<trans-unit id="flexform.fade.description" resname="flexform.fade.description">
+				<source>Animate slides with a fade transition instead of a slide.</source>
+			</trans-unit>
+			<trans-unit id="flexform.darkVariant.label" resname="flexform.darkVariant.label">
+				<source>Dark Variant</source>
+			</trans-unit>
+			<trans-unit id="flexform.disableControls.label" resname="flexform.disableControls.label">
+				<source>Disable Controls</source>
+			</trans-unit>
+			<trans-unit id="flexform.disableIndicators.label" resname="flexform.disableIndicators.label">
+				<source>Disable Indicators</source>
+			</trans-unit>
+			<trans-unit id="flexform.keyboard.label" resname="flexform.keyboard.label">
+				<source>React to keyboard events</source>
+			</trans-unit>
+			<trans-unit id="flexform.pause.label" resname="flexform.pause.label">
+				<source>Pause while hover</source>
+			</trans-unit>
+			<trans-unit id="flexform.pause.description" resname="flexform.pause.description">
+				<source>If set, pauses the cycling of the carousel on mouseenter and resumes the cycling of the carousel
+					on mouseleave. If set to false, hovering over the carousel won't pause it.
+				</source>
+			</trans-unit>
+			<trans-unit id="flexform.ride.label" resname="flexform.ride.label">
+				<source>Autoplay the carousel on load</source>
+			</trans-unit>
+			<trans-unit id="flexform.ride.description" resname="flexform.ride.description">
+				<source>Autoplays the carousel after the user manually cycles the first item. If set to true, autoplays
+					the carousel on load.
+				</source>
+			</trans-unit>
+			<trans-unit id="flexform.wrap.label" resname="flexform.wrap.label">
+				<source>Endless run</source>
+			</trans-unit>
+			<trans-unit id="flexform.wrap.label" resname="flexform.wrap.label">
+				<source>Sets whether the carousel should run continuously or stop after the first pass.</source>
+			</trans-unit>
+			<trans-unit id="flexform.touch.label" resname="flexform.touch.label">
+				<source>Enable touchscreen devices support</source>
+			</trans-unit>
+			<trans-unit id="flexform.touch.description" resname="flexform.touch.description">
+				<source>Sets whether the carousel should support left/right swipe interactions on touchscreen devices.
+				</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

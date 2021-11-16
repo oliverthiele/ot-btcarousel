@@ -1,0 +1,18 @@
+mod.wizards.newContentElement.wizardItems.extras {
+  header = Extras
+  elements {
+    ot_btcarousel {
+      iconIdentifier = ot-btcarousel
+
+      title = LLL:EXT:ot_btcarousel/Resources/Private/Language/locallang_be.xlf:extension.title
+
+      description = LLL:EXT:ot_btcarousel/Resources/Private/Language/locallang_be.xlf:extension.description
+      tt_content_defValues {
+        CType = ot_btcarousel
+        header = LLL:EXT:ot_btcarousel/Resources/Private/Language/locallang_be.xlf:extension.title
+        header_layout = 100
+      }
+    }
+  }
+  show := addToList(ot_btcarousel)
+}

@@ -1,0 +1,8 @@
+projectSettings {
+  sitepackage {
+    # cat=SITEPACKAGE/others/a; type=text; label=Sitepackage Extension Key:
+    extensionKey = ot_bootstrap5
+    # cat=SITEPACKAGE/others/b; type=text; label=Sub-Directory Name:Directory where the framework-specific templates are located. (e.g. Bootstrap4, Bootstrap5, Foundation, …)
+    frameworkDependentSubDirectory = Bootstrap5
+  }
+}

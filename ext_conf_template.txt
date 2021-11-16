@@ -1,0 +1,6 @@
+slider {
+    # cat=Slider/others; type=int+; label=Crop Variant Width
+    width = 1296
+    # cat=Slider/others; type=int+; label=Crop Variant Height
+    height = 450
+}

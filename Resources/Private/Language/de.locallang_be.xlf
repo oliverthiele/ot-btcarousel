@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+	<file source-language="en"
+		  target-language="de"
+		  datatype="plaintext"
+		  original="EXT:ot_btcarousel/Resources/Private/Language/locallang_be.xlf"
+		  date="2021-02-21T16:30:40Z"
+		  product-name="ot_btcarousel">
+		<header/>
+		<body>
+			<trans-unit id="extension.title" resname="extension.title">
+				<source>BT Carousel</source>
+				<target>BT Karussell</target>
+			</trans-unit>
+			<trans-unit id="extension.description" resname="extension.description">
+				<source>Content Element for Bootstrap Carousels</source>
+				<target>Inhaltselement für Bootstrap Karussells</target>
+			</trans-unit>
+			<trans-unit id="cropVariant.slider" resname="cropVariant.slider">
+				<source>Slider Desktop</source>
+				<target>Slider Desktop</target>
+			</trans-unit>
+			<trans-unit id="sys_file_reference.link.description" resname="sys_file_reference.link.description">
+				<source>The title of the link overwrites the button label set by default in the slider.</source>
+				<target>Der Titel des Links überschreibt die standardmäßig gesetzte Button-Beschriftung im Slider.
+				</target>
+			</trans-unit>
+			<trans-unit id="flexform.interval.label" resname="flexform.interval.label">
+				<source>Interval</source>
+				<target>Intervall</target>
+			</trans-unit>
+			<trans-unit id="flexform.fade.label" resname="flexform.fade.label">
+				<source>Use Crossfade</source>
+				<target>Benutze Überblendung</target>
+			</trans-unit>
+			<trans-unit id="flexform.fade.description" resname="flexform.fade.description">
+				<source>Animate slides with a fade transition instead of a slide.</source>
+				<target>Slides überblenden anstatt verschieben.</target>
+			</trans-unit>
+			<trans-unit id="flexform.darkVariant.label" resname="flexform.darkVariant.label">
+				<source>Dark Variant</source>
+				<target>Dunkle Variante</target>
+			</trans-unit>
+			<trans-unit id="flexform.disableControls.label" resname="flexform.disableControls.label">
+				<source>Disable Controls</source>
+				<target>Deaktiviere Kontroll-Icons</target>
+			</trans-unit>
+			<trans-unit id="flexform.disableIndicators.label" resname="flexform.disableIndicators.label">
+				<source>Disable Indicators</source>
+				<target>Deaktiviere Indikatoren</target>
+			</trans-unit>
+			<trans-unit id="flexform.keyboard.label" resname="flexform.keyboard.label">
+				<source>React to keyboard events</source>
+				<target>Reagieren auf Tastaturereignisse</target>
+			</trans-unit>
+			<trans-unit id="flexform.keyboard.label" resname="flexform.keyboard.label">
+				<source>React to keyboard events</source>
+				<target>Reagieren auf Tastaturereignisse</target>
+			</trans-unit>
+			<trans-unit id="flexform.pause.label" resname="flexform.pause.label">
+				<source>Pause while hover</source>
+				<target>Pause bei Mouseover</target>
+			</trans-unit>
+			<trans-unit id="flexform.pause.description" resname="flexform.pause.description">
+				<source>If set, pauses the cycling of the carousel on mouseenter and resumes the cycling of the carousel
+					on mouseleave. If set to false, hovering over the carousel won't pause it.
+				</source>
+				<target>Wenn diese Option gesetzt ist, wird das Karussell beim Betreten mit der Maus angehalten und beim
+					Verlassen mit der Maus wieder fortgesetzt. Wenn er auf false gesetzt ist, wird das Karussell nicht
+					angehalten, wenn Sie mit der Maus darüber fahren.
+				</target>
+			</trans-unit>
+			<trans-unit id="flexform.ride.label" resname="flexform.ride.label">
+				<source>Autoplay the carousel on load</source>
+				<target>Autoplay des Karussells beim Laden</target>
+			</trans-unit>
+			<trans-unit id="flexform.ride.description" resname="flexform.ride.description">
+				<source>Autoplays the carousel after the user manually cycles the first item. If set to true, autoplays
+					the carousel on load.
+				</source>
+				<target>Zeigt das Karussell automatisch an, nachdem der Benutzer das erste Element manuell gewechselt
+					hat. Wenn auf true gesetzt, wird das Karussell beim Laden automatisch angezeigt.
+				</target>
+			</trans-unit>
+			<trans-unit id="flexform.wrap.label" resname="flexform.wrap.label">
+				<source>Endless run</source>
+				<target>Endloser Durchlauf</target>
+			</trans-unit>
+			<trans-unit id="flexform.wrap.label" resname="flexform.wrap.label">
+				<source>Stop after the first run?</source>
+				<target>Nach dem ersten Durchlauf stoppen?</target>
+			</trans-unit>
+			<trans-unit id="flexform.touch.label" resname="flexform.touch.label">
+				<source>Enable support for touchscreen devices</source>
+				<target>Unterstützung für Touchscreen-Geräten aktivieren</target>
+			</trans-unit>
+			<trans-unit id="flexform.touch.description" resname="flexform.touch.description">
+				<source>Sets whether the carousel should support left/right swipe interactions on touchscreen devices.
+				</source>
+				<target>Legt fest, ob das Karussell Links/Rechts-Swipe-Interaktionen auf Touchscreen-Geräten
+					unterstützen soll.
+				</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

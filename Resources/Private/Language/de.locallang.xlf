@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+	<file source-language="en"
+		  target-language="de"
+		  datatype="plaintext"
+		  original="EXT:ot_btcarousel/Resources/Private/Language/locallang.xlf"
+		  date="2021-02-21T07:36:46Z"
+		  product-name="ot_btcarousel">
+		<header/>
+		<body>
+			<trans-unit id="next" resname="next">
+				<source>Next</source>
+				<target>Nächstes</target>
+			</trans-unit>
+			<trans-unit id="previous" resname="previous">
+				<source>Previous</source>
+				<target>Vorheriges</target>
+			</trans-unit>
+			<trans-unit id="more" resname="more">
+				<source>More</source>
+				<target>Mehr</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

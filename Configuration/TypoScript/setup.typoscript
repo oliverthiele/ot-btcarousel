@@ -1,0 +1,40 @@
+tt_content {
+  ot_btcarousel < lib.contentElement
+  ot_btcarousel {
+    templateRootPaths {
+      10 = EXT:{$projectSettings.sitepackage.extensionKey}/Resources/Private/Templates/Content/
+      20 = EXT:ot_btcarousel/Resources/Private/{$projectSettings.sitepackage.frameworkDependentSubDirectory}/Templates/
+    }
+
+    layoutRootPaths {
+      10 = EXT:{$projectSettings.sitepackage.extensionKey}/Resources/Private/Layouts/Content/
+      20 = EXT:ot_btcarousel/Resources/Private/{$projectSettings.sitepackage.frameworkDependentSubDirectory}/Layouts/
+    }
+
+    partialRootPaths {
+      10 = EXT:{$projectSettings.sitepackage.extensionKey}/Resources/Private/Partials/Content/
+      20 = EXT:ot_btcarousel/Resources/Private/{$projectSettings.sitepackage.frameworkDependentSubDirectory}/Partials/
+    }
+
+    templateName = Carousel
+
+    settings {
+      # Use the Extension Manager Configuration for default width and height (crop variant) of the image files.
+      # This setting will set all images to the same size in the Slider
+      width = 1296
+      height = 450
+    }
+
+    dataProcessing {
+      10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+      10 {
+        references.fieldName = assets
+      }
+
+      40 = TYPO3\CMS\Frontend\DataProcessing\FlexFormProcessor
+      40 {
+        as = flexform
+      }
+    }
+  }
+}

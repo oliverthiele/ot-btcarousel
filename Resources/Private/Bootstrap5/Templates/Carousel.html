@@ -1,0 +1,113 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      lang="en" data-namespace-typo3-fluid="true">
+<head>
+    <meta charset="utf-8">
+    <title>Template: Bootstrap 5 Carousel</title>
+</head>
+<body>
+
+<f:layout name="CeLayoutBootstrap5"/>
+
+<f:section name="Main">
+
+    <div id="carousel-{data.uid}"
+         class="carousel slide{f:if(condition: '{flexform.fade} == 1', then: ' carousel-fade')}{f:if(condition: '{flexform.darkVariant} == 1', then: ' carousel-dark')}"
+         data-bs-ride="{f:if(condition: '{flexform.ride} == 1', then: 'carousel', else:'false')}"
+         data-bs-interval="{flexform.interval}"
+         {f:if(condition:
+    '{flexform.keyboard} == 0', then: 'data-bs-keybord="false"')}
+    {f:if(condition: '{flexform.wrap} == 1', then: 'data-bs-wrap="false"' )}
+    >
+    <f:comment><!-- Indicators --></f:comment>
+    <f:if condition="{flexform.disableIndicators} == 0">
+        <div class="carousel-indicators">
+            <f:for each="{files}" as="file" iteration="fileIterator">
+                <button type="button"
+                        data-bs-target="#carousel-{data.uid}"
+                        data-bs-slide-to="{fileIterator.index}" {f:if(condition:
+                '{fileIterator.isFirst}', then: ' class="active" aria-current="true"' )} aria-label="Slide
+                {fileIterator.cycle}"></button>
+            </f:for>
+        </div>
+    </f:if>
+
+    <f:comment><!-- Wrapper for slider items --></f:comment>
+    <div class="carousel-inner">
+        <f:for each="{files}" as="file" iteration="fileIterator">
+            <div class="carousel-item{f:if(condition: '{fileIterator.isFirst}', then: ' active' )}">
+                <figure>
+                    <f:comment> <!-- <![CDATA[
+                     todo Calculate proportions automatically
+                    ]]>	--> </f:comment>
+                    <div  class="ratio ratio-slider">
+                        <picture>
+                            <source srcset="{f:uri.image(image: file, cropVariant:'4:3', maxWidth: '551')}"
+                                    media="(max-width: 575px)"/>
+                            <source srcset="{f:uri.image(image: file, cropVariant:'16:9', maxWidth: '516')}"
+                                    media="(min-width: 576px) and (max-width: 767px)"/>
+                            <source srcset="{f:uri.image(image: file, cropVariant:'16:9', maxWidth: '696')}"
+                                    media="(min-width: 768px) and (max-width: 991px)"/>
+                            <source srcset="{f:uri.image(image: file, cropVariant:'slider', maxWidth: '936')}"
+                                    media="(min-width: 992px) and (max-width: 1199)"/>
+                            <source srcset="{f:uri.image(image: file, cropVariant:'slider', maxWidth: '1116')}"
+                                    media="(min-width:1200px) and (max-width: 1399)"/>
+                            <source srcset="{f:uri.image(image: file, cropVariant:'slider', maxWidth: '1296')}"
+                                    media="(min-width:1400px)"/>
+                            <f:image class="d-block img-fluid w-100" loading="lazy" image="{file}" cropVariant="slider"
+                                     width="1296" height="450"/>
+                        </picture>
+                    </div>
+                    <f:if condition="{file.properties.title} || {file.properties.description} ">
+                        <figcaption class="carousel-caption d-none d-md-block">
+                            <f:if condition="{file.properties.title}">
+                                <strong>{file.properties.title}</strong><br/>
+                            </f:if>
+                            <f:if condition="{file.properties.description}">
+                                {file.properties.description}<br/>
+                                <f:comment> <!-- <![CDATA[
+
+                                <f:alias map="{buttonText : '{b:typolinkParams(parameter: \'{file.properties.link}\')}'}">
+                                </f:alias>
+                                ]]>	--> </f:comment>
+
+                                <f:link.typolink parameter="{file.properties.link}"
+                                                 class="btn btn-primary btn-sm my-3{f:if(condition: '{flexform.darkVariant} == 1', then: ' btn-dark', else: ' btn-light')}">
+                                    <f:if condition="{buttonText} != ''">
+                                        <f:then>{buttonText}</f:then>
+                                        <f:else>
+                                            <f:translate key="more" extensionName="ot_btcarousel"/>
+                                        </f:else>
+                                    </f:if>
+                                    <f:comment> <!-- <![CDATA[
+                                        <b:icon iconIdentifier="chevron-right"
+                                            aria-hidden="true"
+                                            iconSize="1x"
+                                            color="{f:if(condition: '{flexform.darkVariant} == 1', then: '#fff', else: '#000')}" />
+                                    ]]>	--> </f:comment>
+                                </f:link.typolink>
+
+                            </f:if>
+                        </figcaption>
+                    </f:if>
+                </figure>
+            </div>
+        </f:for>
+    </div>
+
+    <f:comment><!-- Controls --></f:comment>
+    <f:if condition="{flexform.disableControls} == 0">
+        <button class="carousel-control-prev" type="button" href="#carousel-{data.uid}" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden"><f:translate key="previous" extensionName="ot_btcarousel" default="Previous"/></span>
+        </button>
+        <button class="carousel-control-next" type="button" href="#carousel-{data.uid}" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden"><f:translate key="next" extensionName="ot_btcarousel" default="Next"/></span>
+        </button>
+    </f:if>
+    </div>
+</f:section>
+
+</body>
+</html>
