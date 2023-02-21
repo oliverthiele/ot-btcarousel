@@ -19,7 +19,10 @@ use TYPO3\CMS\Core\Utility\GeneralUtility;
     /**
      * Add Content Element
      */
-    if (!is_array($GLOBALS['TCA']['tt_content']['types']['ot_btcarousel'])) {
+    if (
+        ! array_key_exists('ot_btcarousel', $GLOBALS['TCA']['tt_content']['types'])
+        || ! is_array($GLOBALS['TCA']['tt_content']['types']['ot_btcarousel'])
+    ) {
         $GLOBALS['TCA']['tt_content']['types']['ot_btcarousel'] = [];
     }
 
