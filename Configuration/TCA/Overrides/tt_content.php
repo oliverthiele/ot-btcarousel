@@ -5,8 +5,9 @@ defined('TYPO3') or die('Access denied.');
 use TYPO3\CMS\Core\Configuration\ExtensionConfiguration;
 use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
+use TYPO3\CMS\Frontend\Preview\TextmediaPreviewRenderer;
 
-(function () {
+(static function () {
     $slider = GeneralUtility::makeInstance(
         ExtensionConfiguration::class
     )->get('ot_btcarousel', 'slider');
@@ -19,7 +20,7 @@ use TYPO3\CMS\Core\Utility\GeneralUtility;
     /**
      * Add Content Element
      */
-    if (!is_array($GLOBALS['TCA']['tt_content']['types']['ot_btcarousel'])) {
+    if (!isset($GLOBALS['TCA']['tt_content']['types']['ot_btcarousel']) || !is_array($GLOBALS['TCA']['tt_content']['types']['ot_btcarousel'])) {
         $GLOBALS['TCA']['tt_content']['types']['ot_btcarousel'] = [];
     }
 
@@ -42,6 +43,8 @@ use TYPO3\CMS\Core\Utility\GeneralUtility;
      * Assign Icon
      */
     $GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['ot_btcarousel'] = 'ot-btcarousel';
+
+    $GLOBALS['TCA']['tt_content']['types']['ot_btcarousel']['previewRenderer'] = TextmediaPreviewRenderer::class;
 
     /**
      * Register Flexform
@@ -71,7 +74,7 @@ use TYPO3\CMS\Core\Utility\GeneralUtility;
             --palette--;;language,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access,
             --palette--;;hidden,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.access;access,
             --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:categories,
-            --div--;LLL:EXT:lang/Resources/Private/Language/locallang_tca.xlf:sys_category.tabs.category,categories,
+            --div--;LLL:EXT:core/Resources/Private/Language/locallang_tca.xlf:sys_category.tabs.category,categories,
             --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:notes,rowDescription,
             --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:extended
          ',

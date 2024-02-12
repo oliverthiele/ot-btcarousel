@@ -6,7 +6,7 @@ use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 
 defined('TYPO3') or die();
 
-(function () {
+(static function () {
     ExtensionManagementUtility::addStaticFile(
         'ot_btcarousel',
         'Configuration/TypoScript',
